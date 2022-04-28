@@ -80,7 +80,7 @@ with models.DAG(
         
         ti.xcom_push(key='s3_bucket', value=params['s3_bucket'])
         ti.xcom_push(key='s3_object_prefix', value=params['s3_object_prefix'])
-        ti.xcom_push(key='gcs_bucket', value=params['gcs _bucket'])
+        ti.xcom_push(key='gcs_bucket', value=params['gcs_bucket'])
     
 
     parse_params = PythonOperator(
