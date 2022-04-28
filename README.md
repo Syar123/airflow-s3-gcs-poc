@@ -21,7 +21,7 @@ params:
 ```
 
 ## Connection id's setup (Amazon and Google)
-I am using Google CLoud Composer (2.0.11) to create airflow environment using appropriate PYPI packages (botocore, boto3, etc)
+I am using Google Cloud Composer (2.0.11) to create airflow environment using appropriate PYPI packages (botocore, boto3, etc)
 
 Go to Airflow web interface ---> admin ---> connection ---> create new connection
 
