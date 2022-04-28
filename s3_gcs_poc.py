@@ -27,7 +27,7 @@ copy s3 objects to a gcs bucket using the same prefix as s3.
 
 ```
 params:
-    s3 bucket           (required)
+    s3_bucket           (required)
     s3_object_prefix    (required, folder path not file path)
     gcs_bucket          (required)
 
@@ -50,7 +50,7 @@ with models.DAG(
     default_args=default_dag_args) as dag:
     
     print_conf = BashOperator(
-        task_id='print conf',
+        task_id='print_conf',
         bash_command='echo conf: {{ dag_run.conf }}',
         retries=3
     )
@@ -84,7 +84,7 @@ with models.DAG(
     
 
     parse_params = PythonOperator(
-        task_id='parse params',
+        task_id='parse_params',
         python_callable=parse_params,
         provide_context=True,
         retries=1
